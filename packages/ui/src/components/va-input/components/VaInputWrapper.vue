@@ -85,7 +85,7 @@
       </div>
     </div>
 
-    <div class="va-input-wrapper__message-list-wrapper">
+    <div v-if="messagesComputed.length" class="va-input-wrapper__message-list-wrapper">
       <slot name="messages" v-bind="{ messages: messagesComputed, errorLimit, color: messagesColor }">
         <va-message-list
           :color="messagesColor"
@@ -233,9 +233,7 @@ export default defineComponent({
   }
 
   &__content-wrapper {
-    width: -moz-available;
-    width: -webkit-fill-available;
-    width: fill-available;
+    width: stretch;
     display: flex;
     align-items: center;
 

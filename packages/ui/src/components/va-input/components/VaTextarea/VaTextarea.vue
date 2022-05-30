@@ -87,7 +87,7 @@ export default defineComponent({
     }))
 
     const computedProps = computed(() => ({
-      ...pick(props, ['disabled', 'readonly', 'placeholder']),
+      ...pick(props, ['disabled', 'readonly', 'placeholder', 'ariaLabel']),
     }))
 
     const focus = () => {
